@@ -31,26 +31,30 @@ Copy code
 ```
 ---
 
-## 📦 Kurulum ve Çalıştırma
+🚀 Hızlı Başlangıç
+1. Docker (Önerilen Yöntem)
 
-**Docker ile (Tavsiye Edilen):**
-```bash
+Tüm pipeline’ı (API + UI) tek komutla başlatın:
+```
 docker-compose up --build
 ```
-FastAPI servisi (8080) ve Streamlit arayüzü (8501) başlar.
 
-Manuel (Python ile):
+FastAPI servisi: localhost:8080
+
+Streamlit arayüzü: localhost:8501
+
+2. Manuel (Python ile)
+
+Docker kullanılamıyorsa:
 ```
-bash
-Copy code
 pip install -r requirements.txt
 python scripts/Data_Clean.py
 python scripts/XGBoost_and_LightGBM.py
 python scripts/DL_Tabular_Regression.py
 ```
-📊 Model Sonuçları
-Hedef	Model	MAE	RMSE	Eğitim Süresi	Tahmin Süresi	Model Dosyası
+📊 Model Performansları
 ```
+Hedef	Model	MAE	RMSE	Eğitim Süresi	Tahmin Süresi	Model Dosyası
 SoH_%	XGBoost	3.86	4.16	0.37s	0.013s	xgboost_model_SoH_%_discharge.pkl
 SoH_%	LightGBM	3.37	3.90	0.13s	0.003s	lightgbm_model_SoH_%_discharge.pkl
 SoC_Progress_%	XGBoost	4.79	6.07	0.36s	0.010s	xgboost_model_SoC_Progress_%_discharge.pkl
@@ -59,17 +63,38 @@ SoH_%	MLP (DL)	3.01	3.72	5.03s	0.000s	mlp_regressor_SoH_%_discharge.pt
 SoC_Progress_%	MLP (DL)	5.49	7.49	5.67s	0.000s	mlp_regressor_SoC_Progress_%_discharge.pt
 ```
 🎯 Temel Özellikler
-Ham veri → öznitelik çıkarımı → keşifsel analiz (EDA) → model seçimi → eğitim → API → arayüz → docker
 
-ML ve DL model karşılaştırması (XGBoost, LightGBM, MLPRegressor)
+Eksiksiz ML/DL Pipeline: Ham veri → öznitelik çıkarımı → EDA → model seçimi ve eğitimi → API → arayüz → docker
 
-Eksik veri ve korelasyon analizi, grafikler (grafikler/ klasörü)
+Model Karşılaştırmaları: SoH ve SoC regresyonunda XGBoost, LightGBM ve MLP (derin öğrenme) modelleri benchmark edilir
 
-Streamlit ile toplu tahmin ve kullanıcı arayüzü
+Keşifsel Veri Analizi: Korelasyon, eksik değerler, görselleştirme (bkz. /graphics)
 
-Docker ile kolay kurulum ve dağıtım
+Kullanıcı Arayüzü: Streamlit uygulaması ile toplu tahmin ve canlı demo
 
-Lisans ve Katkı
+API-First: FastAPI mikroservis ile yüksek performanslı tahmin altyapısı
+
+Tek Komutla Kurulum: Docker Compose ile tam otomasyon ve tekrarlanabilirlik
+
+Modüler Mimari: Pipeline’ın her aşaması ayrı ve şeffaf
+
+📦 Dağıtım
+
+Üretime Hazır: Konteyner tabanlı, versiyonlu, kolay taşınabilir.
+
+Genişletilebilir: Yeni ML/DL modelleri, ön işleme adımları veya veri kaynakları kolayca entegre edilebilir.
+
+👨‍💻 Katkı
+
+PR, issue ve önerilere açıktır.
+
 MIT Lisansı ile lisanslanmıştır.
-Katkıda bulunmak ve öneriler için PR veya issue açabilirsiniz.
-Repo sahibi: adnankerem
+
+📄 Lisans
+
+Bu depo MIT Lisansı
+ ile lisanslanmıştır.
+
+👤 Geliştirici
+
+adnankerem
