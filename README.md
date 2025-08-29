@@ -10,21 +10,21 @@ Bu proje, NASA'nın batarya veri setiyle uçtan uca veri temizleme, feature çı
 
 ## 🚀 Proje Yapısı
 
-api/
-fastAPI.py # FastAPI backend (model servisi)
-data/
-processed/ # Temizlenmiş ve öznitelik çıkarılmış veriler
-raw/ # Ham NASA batarya verisi
-models/ # Eğitilmiş model ve scaler dosyaları (.pkl, .pt)
-scripts/
-Data_Clean.py # Veri temizleme & öznitelik çıkarımı
-DL_Tabular_Regression.py # MLP tabanlı DL model eğitimi
-XGBoost_and_LightGBM.py # ML model eğitimi ve kayıt
-ui/
-streamlit_app.py # Streamlit arayüzü
-main.py # Pipeline yönetimi
-requirements.txt # Gerekli Python paketleri
-docker-compose.yml # Docker orkestrasyonu
+├── api/
+│ └── fastAPI.py # FastAPI backend (model servisi)
+├── data/
+│ ├── processed/ # Temizlenmiş & öznitelik çıkarılmış veriler
+│ └── raw/ # Ham NASA batarya verisi
+├── models/ # Eğitilmiş model ve scaler dosyaları (.pkl, .pt)
+├── scripts/
+│ ├── Data_Clean.py # Veri temizleme & öznitelik çıkarımı
+│ ├── DL_Tabular_Regression.py # MLP tabanlı DL model eğitimi
+│ └── XGBoost_and_LightGBM.py # ML model eğitimi ve kayıt
+├── ui/
+│ └── streamlit_app.py # Streamlit arayüzü
+├── main.py # Pipeline yönetimi (giriş noktası)
+├── requirements.txt # Gerekli Python paketleri
+└── docker-compose.yml # Docker orkestrasyonu
 
 yaml
 Copy code
