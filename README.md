@@ -46,6 +46,11 @@ FastAPI servisi: localhost:8080
 
 Streamlit arayüzü: localhost:8501
 
+UI kullanım videosu izlemek için aşağıdaki bağlantıya tıklayabilirsiniz.:
+```
+https://drive.google.com/drive/folders/1c1RIRxF0kEpyUUCYsY-zROCha9xZl1ik?usp=sharing
+```
+
 2. Manuel (Python ile)
 
 Docker kullanılamıyorsa:
