@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./scripts:/app/scripts
+      - ./models:/models
+      - ./feature_list.pkl:/app/feature_list.pkl
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./scripts:/app/scripts
+      - ./feature_list.pkl:/app/feature_list.pkl
+    depends_on:
+      - fastapi
