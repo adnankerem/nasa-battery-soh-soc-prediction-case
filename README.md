@@ -55,6 +55,17 @@ python scripts/Data_Clean.py
 python scripts/XGBoost_and_LightGBM.py
 python scripts/DL_Tabular_Regression.py
 ```
+📝 Örnek Girdi Üretimi (sample_input_generation.py)
+
+Pipeline testleri, model validasyonu veya arayüz/servis entegrasyonu için örnek batarya veri girdisi üretmek üzere sample_input_generation.py scriptini kullanabilirsiniz.
+
+Açıklama:
+
+Script, model giriş formatına uygun sentetik veri örnekleri oluşturur ve belirttiğiniz konuma CSV olarak kaydeder.
+
+Üretilen dosyayı arayüzde ya da API servisinde toplu test amaçlı kullanabilirsiniz.
+
+
 📊 Model Performansları
 ```
 Hedef	         Model	   MAE	 RMSE	Eğitim Süresi	Tahmin Süresi	Model Dosyası
