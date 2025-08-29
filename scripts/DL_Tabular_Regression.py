@@ -120,8 +120,8 @@ def run_dl_pipeline(input_csv, tasks, drop_cols, batch_size=32, n_epochs=250, lr
         rmse = np.sqrt(np.mean((y_pred - y_true) ** 2))
 
         # --- Model ve scaler kaydı ---
-        model_file = f"mlp_regressor_{TARGET}_{relevant_type}.pt"
-        scaler_file = f"scaler_{TARGET}_{relevant_type}.pkl"
+        model_file = f"./models/mlp_regressor_{TARGET}_{relevant_type}.pt"
+        scaler_file = f"./models/scaler_{TARGET}_{relevant_type}.pkl"
         torch.save(model.state_dict(), model_file)
         joblib.dump(scaler, scaler_file)
 
@@ -142,7 +142,7 @@ def run_dl_pipeline(input_csv, tasks, drop_cols, batch_size=32, n_epochs=250, lr
 if __name__ == "__main__":
     # Örnek kullanım için, discharge döngüsü ve ana hedefler üzerinde pipeline çalıştırılır
     run_dl_pipeline(
-        "../tmp/all_cycles_metadata_core.csv",
+        "./tmp/all_cycles_metadata_core.csv",
         [("SoH_%", "discharge"), ("SoC_Progress_%", "discharge")],
         drop_cols=['uid', 'battery_id', 'test_id', 'filename', 'type', 'start_time', 'SoH_%', 'SoC_Progress_%']
     )

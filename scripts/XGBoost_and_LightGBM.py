@@ -85,7 +85,7 @@ def run_ml_pipeline(input_csv, tasks, drop_cols, min_non_nan_ratio=0.5):
             rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
             # Model dosyası kaydı
-            model_file = f"{model_name}_{target}_{relevant_type}.pkl"
+            model_file = f"./models/{model_name}_{target}_{relevant_type}.pkl"
             joblib.dump(model, model_file)
 
             # Sonuçları dict'e kaydet
@@ -102,7 +102,7 @@ def run_ml_pipeline(input_csv, tasks, drop_cols, min_non_nan_ratio=0.5):
 if __name__ == "__main__":
     # Komut satırından çalıştırmak için örnek parametrelerle pipeline başlatılır
     run_ml_pipeline(
-        "../tmp/all_cycles_metadata_core.csv",
+        "./tmp/all_cycles_metadata_core.csv",
         [("SoH_%", "discharge"), ("SoC_Progress_%", "discharge")],
         drop_cols=['uid', 'battery_id', 'test_id', 'filename', 'type', 'start_time', 'SoH_%', 'SoC_Progress_%']
     )
