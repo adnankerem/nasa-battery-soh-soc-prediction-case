@@ -57,13 +57,13 @@ python scripts/DL_Tabular_Regression.py
 ```
 📊 Model Performansları
 ```
-Hedef	Model	MAE	RMSE	Eğitim Süresi	Tahmin Süresi	Model Dosyası
-SoH_%	XGBoost	3.86	4.16	0.37s	0.013s	xgboost_model_SoH_%_discharge.pkl
-SoH_%	LightGBM	3.37	3.90	0.13s	0.003s	lightgbm_model_SoH_%_discharge.pkl
-SoC_Progress_%	XGBoost	4.79	6.07	0.36s	0.010s	xgboost_model_SoC_Progress_%_discharge.pkl
-SoC_Progress_%	LightGBM	4.97	6.09	0.10s	0.004s	lightgbm_model_SoC_Progress_%_discharge.pkl
-SoH_%	MLP (DL)	3.01	3.72	5.03s	0.000s	mlp_regressor_SoH_%_discharge.pt
-SoC_Progress_%	MLP (DL)	5.49	7.49	5.67s	0.000s	mlp_regressor_SoC_Progress_%_discharge.pt
+Hedef	         Model	   MAE	 RMSE	Eğitim Süresi	Tahmin Süresi	Model Dosyası
+SoH_%	         XGBoost 	3.86	4.16	   0.37s	     0.013s	xgboost_model_SoH_%_discharge.pkl
+SoH_%	         LightGBM	3.37	3.90	   0.13s	     0.003s	lightgbm_model_SoH_%_discharge.pkl
+SoC_Progress_%	XGBoost	 4.79	6.07	   0.36s	     0.010s	xgboost_model_SoC_Progress_%_discharge.pkl
+SoC_Progress_%	LightGBM	4.97	6.09	   0.10s	     0.004s	lightgbm_model_SoC_Progress_%_discharge.pkl
+SoH_%	         MLP (DL)	3.01	3.72	   5.03s	     0.000s	mlp_regressor_SoH_%_discharge.pt
+SoC_Progress_%	MLP (DL)	5.49	7.49	   5.67s	     0.000s	mlp_regressor_SoC_Progress_%_discharge.pt
 ```
 🎯 Temel Özellikler
 
