@@ -4,7 +4,7 @@ nd-to-end SoH/SoC prediction on NASA battery data: feature extraction, EDA, ML/D
 
 # NASA Batarya SoH/SoC Tahmin Pipeline'ı
 
-Bu proje, NASA'nın batarya veri setiyle uçtan uca veri temizleme, öznitelik çıkarımı, keşifsel veri analizi, makine öğrenmesi ve derin öğrenme tabanlı modelleme, API ve kullanıcı arayüzü ile SoH (State of Health) ve SoC (State of Charge) tahmini sağlar. Tüm pipeline, Docker ile kolayca dağıtılır ve yeniden üretilebilir.
+Bu proje, NASA'nın batarya veri setiyle uçtan uca veri temizleme, feature çıkarımı, keşifsel veri analizi, makine öğrenmesi ve derin öğrenme tabanlı modelleme, API ve kullanıcı arayüzü ile SoH (State of Health) ve SoC (State of Charge) tahmini sağlar. Tüm pipeline, Docker ile kolayca dağıtılır ve yeniden üretilebilir.
 
 ---
 
